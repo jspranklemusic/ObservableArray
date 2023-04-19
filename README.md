@@ -16,3 +16,24 @@ A Typescript function to create an asynchronous, reactive array via the Proxy ob
   
   // => 'changed!', [1, 2, 3, 4, 5], [1, 2, 3, 4]
 ```
+
+## Notes
+
+This method creates a copy of the array. Making any changes to the original, non-proxied array will not result in reactive changes.
+
+## Async
+
+All of the changes happen asynchronously. For example:
+
+```
+const arr = getObservableArray([1,2,3,4], callBack)
+
+arr.push(5,6,7,8,9,10)
+arr.splice(1)
+```
+
+...will result in this:
+
+```
+// => 'changed!', [1], [1, 2, 3, 4]
+```
