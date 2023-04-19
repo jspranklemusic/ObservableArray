@@ -1,5 +1,5 @@
 # ObservableArray
-A Typescript function to create an asynchronous, reactive array.
+A Typescript function to create an asynchronous, reactive array via the Proxy object in Javascript.
 
 ## Example
 
