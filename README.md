@@ -23,7 +23,7 @@ This method creates a copy of the array. Making any changes to the original, non
 
 ## Async
 
-All of the changes happen asynchronously. For example:
+All of the changes happen asynchronously, and any reactive method will run after all of the changes have finished running in the main event loop. For example:
 
 ```
 const arr = getObservableArray([1,2,3,4], callBack)
